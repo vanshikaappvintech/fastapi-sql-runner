@@ -1,30 +1,4 @@
 # #enforce and validate sql 
-# # app/utils.py
-# import sqlparse
-
-# # Keywords we must forbid anywhere in the SQL
-# FORBIDDEN = {"INSERT", "UPDATE", "DELETE", "DROP", "ALTER", "CREATE", "TRUNCATE"}
-
-# def is_select_query(sql: str) -> bool:
-#     # 1) Strip whitespace and leading semicolons
-#     stmt = sql.strip().lstrip(";-")
-#     # 2) Must begin with SELECT (case-insensitive)
-#     if not stmt.upper().startswith("SELECT"):
-#         return False
-#     # 3) Tokenize and ensure no forbidden keywords appear
-#     tokens = {tok.value.upper() for tok in sqlparse.parse(stmt)[0].tokens if tok.value}
-#     if FORBIDDEN.intersection(tokens):
-#         return False
-#     return True
-
-# def validate_syntax(sql: str) -> bool:
-#     try:
-#         parsed = sqlparse.parse(sql)
-#         return bool(parsed)  # empty parse = invalid
-#     except Exception:
-#         return False
-
-
 import sqlparse
 
 # Keywords we must forbid anywhere in the SQL

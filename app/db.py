@@ -1,15 +1,4 @@
 # #database connection
-# # app/db.py
-# from sqlalchemy import create_engine
-# from sqlalchemy.engine import Engine
-
-# # Use your pgAdmin credentials & DB name
-# DATABASE_URL = "postgresql://postgres:Password123@localhost:5432/devdb"
-
-# engine: Engine = create_engine(DATABASE_URL, future=True)
-
-# app/db.py
-
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
